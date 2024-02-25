@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block menu %}
+
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'pomodoro'%}">Cronometro</a>
+    <style>
+      h1{margin:30px; height:40vh; align-items: center; justify-content: center; display: flex}
+      </style>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'dashboard'%}">Insight</a>
+  </li>
+
+</ul>
+{% endblock %}
+
+{% block footer %}
+<footer class="py-5 text-center text-body-secondary bg-body-tertiar">
+  <div class="container">
+    <span class="text-body-secondary">Desenvolvido por Albanisia e Alec.</span>
+  </div>
+</footer>
+{% endblock %}
