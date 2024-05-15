@@ -7,4 +7,4 @@ class UsuarioViewSet(viewsets.ModelViewSet):
     model = Usuario
     serializer_class = UsuarioSerializer
     queryset = Usuario.objects.all()
-    filter_fields = ('nome', 'senha')
+    filter_fields = ('nome', 'senha', 'email',)
