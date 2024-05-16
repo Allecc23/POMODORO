@@ -5,7 +5,7 @@ class UsuarioForm(ModelForm):
     class Meta:
         model = Usuario
         fields = [
-            'nome', 'senha'
+            'nome', 'senha', 'email'
         ]
 
 

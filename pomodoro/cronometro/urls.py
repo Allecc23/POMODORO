@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework import routers
-from viewsets import UsuarioViewSet
+from .viewsets import UsuarioViewSet
 from .views import home, pomodoro, dashboard, historico, createUsuario,readUsuario, updateUsuario, deleteUsuario
 urlpatterns = [
     path('', home, name='home'),
@@ -10,14 +10,14 @@ urlpatterns = [
 ]
 
 router = routers .DefaultRouter()
-router.register(r'usuario', UsuarioViewSet, basename="usuario")
+router.register(r'Usuario', UsuarioViewSet, basename="Usuario")
 
 urlpatterns =[
 
     path('createUsuario', createUsuario, name='createUsuario'),
     path('readUsuario', readUsuario, name='readUsuario'),
     path('updateUsuario/<int:id>', updateUsuario, name='updateUsuario'),
-    path('deleteUsuario', deleteUsuario, name='deleteUsuario'),
+    path('deleteUsuario/<int:id>', deleteUsuario, name='deleteUsuario'),
     path('api/', include(router.urls)),
 ]
 
